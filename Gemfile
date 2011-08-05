@@ -3,6 +3,7 @@ gem 'rails', '3.0.9'
 gem 'mysql2', '~> 0.2.6'
 gem "haml"
 gem "devise"
+gem "heroku"
 
 group :development do
   gem "haml-rails"
