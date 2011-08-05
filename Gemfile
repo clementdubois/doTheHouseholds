@@ -2,12 +2,23 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.9'
 gem 'mysql2', '~> 0.2.6'
 gem "haml"
-gem "haml-rails", :group => :development
-gem "rspec-rails", :group => [:development, :test]
-gem "factory_girl_rails", :group => :test
-gem "cucumber-rails", :group => :test
-gem "capybara", :group => :test
-gem "database_cleaner", :group => :test
-gem "launchy", :group => :test
 gem "devise"
-gem "rails-footnotes", :group => :development
+
+group :development do
+  gem "haml-rails"
+  gem "rspec-rails"
+  gem "rails-footnotes"
+end
+group :test do
+  gem 'spork', '0.9.0.rc8'
+  gem "rspec-rails"
+  gem "factory_girl_rails"
+  gem "cucumber-rails"
+  gem "capybara"
+  gem "database_cleaner"
+  gem "launchy"
+  gem 'rb-fsevent'
+  gem 'guard-spork'
+  gem 'guard-cucumber'
+  gem 'guard-rspec'
+end
