@@ -2,14 +2,16 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.9'
 gem 'mysql2', '~> 0.2.6'
 gem "haml"
+gem "sass"
 gem "devise"
 gem "heroku"
-
+gem "escape_utils"
 
 group :development do
   gem "haml-rails"
   gem "rspec-rails"
   gem "rails-footnotes"
+  gem "nifty-generators"
 end
 group :test do
   gem 'spork', '0.9.0.rc8'
@@ -23,4 +25,6 @@ group :test do
   gem 'guard-spork'
   gem 'guard-cucumber'
   gem 'guard-rspec'
+  gem 'guard-bundler'
+  gem 'growl'
 end
